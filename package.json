@@ -15,5 +15,9 @@
   "bugs": {
     "url": "https://github.com/R4JxF60/public_diary/issues"
   },
-  "homepage": "https://github.com/R4JxF60/public_diary#readme"
+  "homepage": "https://github.com/R4JxF60/public_diary#readme",
+  "dependencies": {
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0"
+  }
 }
