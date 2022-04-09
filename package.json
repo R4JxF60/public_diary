@@ -1,0 +1,19 @@
+{
+  "name": "public_diary",
+  "version": "1.0.0",
+  "description": "public diary social media network",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/R4JxF60/public_diary.git"
+  },
+  "author": "rajitha kumara",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/R4JxF60/public_diary/issues"
+  },
+  "homepage": "https://github.com/R4JxF60/public_diary#readme"
+}
