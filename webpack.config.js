@@ -4,8 +4,21 @@ const path = require('path');
 module.exports = {
     entry: "./src/init.js",
     output: {
-        filename: 'web_scripts.js',
-        path: path.resolve(__dirname, "serve")
+        filename: 'main.js',
+        path: path.resolve(__dirname, "public")
     },
     mode: "development",
+    module: {
+        rules: [
+            {
+                test: /\.js$/i,
+                exclude: /node_modules/,
+                use: ["babel-loader"],
+            },
+            {
+                test: /\.css$/i,
+                use: ["style-loader", "css-loader"],
+            },
+        ]
+    }
 };
