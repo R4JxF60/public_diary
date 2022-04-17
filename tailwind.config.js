@@ -6,7 +6,7 @@ module.exports = {
         "pd-accent-blue": "#7997FA",
         "pd-fade-blue": "#F6F8FF",
         "pd-stroke-blue": "#EEF2FF",
-        "pd-background-white": "#FFFFFF",
+        "pd-pure-white": "#FFFFFF",
         "pd-lotus-red": "#FF5C83",
         "pd-text-gray": "#616161",
       },
@@ -15,7 +15,16 @@ module.exports = {
         "pd-sans-heading": ["Lato", "sans-serif"],
         "pd-handwrite": ["Pacifico", "cursive"],
       },
+      fontSize: {
+        "pd-3xl-ex": ["2rem", {
+          lineHeight: "56px", 
+        }]
+      },
     },
   },
-  plugins: [],
+  plugins: [require('@tailwindcss/forms')(
+    {
+      strategy: 'base',
+    }
+  ),],
 }

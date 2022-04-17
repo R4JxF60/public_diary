@@ -20,5 +20,10 @@ module.exports = {
                 use: ["style-loader", "css-loader", "postcss-loader"],
             },
         ]
+    },
+    devServer: {
+        port: 3000,
+        open: true,
+        hot: true,
     }
 };
