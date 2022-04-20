@@ -1,6 +1,5 @@
 import React from "react";
 import * as ReactDOM from "react-dom";
-import { setTheme } from "./preflight";
 import "./styles/main.css";
 import App from "./components/App/App";
 
@@ -15,6 +14,13 @@ mobileSignalDispatcher.addEventListener("change", () => {
 splitSignalDispatcher.addEventListener("change", () => {
     createRoot({onMobile: mobileSignalDispatcher.matches, split: splitSignalDispatcher.matches});
 });
+
+const setTheme = () => {
+    const theme = window.matchMedia('(prefers-color-scheme: dark)');
+    theme.addEventListener("change", () => {
+        theme.matches ? document.body.style.backgroundColor = "#11151C" : document.body.style.backgroundColor = "#F6F8FF";
+    });
+}
 
 const createRoot = props => {
     ReactDOM.render(
