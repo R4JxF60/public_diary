@@ -15,12 +15,12 @@ class Search extends React.Component {
 
     render() {
         return(
-            <div className="bg-pd-fade-blue max-h-16 flex item-center border-pd-stroke-blue border-solid border rounded-xl w-full md:mr-0 md:ml-0 mr-6 ml-6">
+            <div className="bg-pd-fade-blue max-h-16 flex item-center border-pd-stroke-blue border-solid border rounded-xl w-full md:mr-0 md:ml-0 mr-6 ml-6 dark:bg-pd-dark-black dark:border-none">
                 <form className="flex w-full">
-                    <input type="search" className="form-input border-none outline-none bg-transparent w-full" placeholder="Search Users" value={this.state.value} onChange={this.getSuggestions}></input>
+                    <input type="search" className="form-input border-none outline-none bg-transparent w-full text-pd-accent-blue dark:text-pd-dark-accent-blue" placeholder="Search Users" value={this.state.value} onChange={this.getSuggestions}></input>
                     <div className="flex items-center justify-center">
-                        <button type="submit" className="material-icons-round md-24 text-pd-accent-blue">search</button>
-                        <button className="material-icons-round text-pd-accent-blue hidden">search_off</button>
+                        <button type="submit" className="material-icons-round md-24 text-pd-accent-blue dark:text-pd-dark-accent-blue">search</button>
+                        <button className="material-icons-round text-pd-accent-blue hidden dark:text-pd-dark-accent-blue">search_off</button>
                     </div>
                 </form>
             </div>

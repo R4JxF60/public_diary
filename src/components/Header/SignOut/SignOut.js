@@ -18,7 +18,7 @@ class SignOut extends React.Component {
     render() {
         return (
             <div className="relative">
-                <div ref={this.expandBtn} onClick={this.handleExpand} className="bg-pd-accent-blue w-9 h-9 rounded-full material-icons-round md-24 text-pd-pure-white flex justify-center items-center cursor-pointer select-none mr-6">{this.state.icon}</div>
+                <div ref={this.expandBtn} onClick={this.handleExpand} className="bg-pd-accent-blue w-9 h-9 rounded-full material-icons-round md-24 text-pd-pure-white flex justify-center items-center cursor-pointer select-none mr-6 dark:bg-pd-dark-accent-blue dark:text-pd-dark-black">{this.state.icon}</div>
                 {this.state.isExpaned ? <SignOutInfoDiv /> : false}
             </div>
         );

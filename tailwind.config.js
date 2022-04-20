@@ -9,6 +9,10 @@ module.exports = {
         "pd-pure-white": "#FFFFFF",
         "pd-lotus-red": "#FF5C83",
         "pd-text-gray": "#616161",
+        "pd-dark-accent-blue": "#9AAED6",
+        "pd-dark-black": "#11151C",
+        "pd-dark-fade-black": "#19212E",
+        "pd-dark-text-blue": "#A3ABBB",
       },
       fontFamily: {
         "pd-sans-body": ["Roboto", "sans-serif"],
