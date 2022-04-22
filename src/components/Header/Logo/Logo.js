@@ -3,7 +3,6 @@ import React from "react";
 class Logo extends React.Component {
     constructor(props) {
         super(props);
-        this.render = this.render.bind(this);
     }
 
     render() {

@@ -4,7 +4,6 @@ import SignOutInfoDiv from "../SIgnOutInfoDiv/SignOutInfoDiv";
 class SignOut extends React.Component {
     constructor(props) {
         super(props);
-        this.render = this.render.bind(this);
         this.handleExpand = this.handleExpand.bind(this);
         this.expandBtn = React.createRef();
         this.state = {isExpaned: false, icon: "expand_more"};
