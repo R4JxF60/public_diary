@@ -50,14 +50,14 @@ class TodayDiv extends React.Component {
 
     render() {
         return (
-            <div className="lg:w-80 md:w-64 w-52 md:h-24 h-full items-center bg-pd-fade-blue border border-solid border-pd-stroke-blue rounded-lg font-pd-sans-body hidden sm:flex">
-                <div className="bg-pd-accent-blue rounded-lg w-2/6 h-full flex items-center justify-center flex-col text-pd-pure-white">
+            <div className="w-52 lg:w-80 md:w-64 md:h-24 h-full items-center bg-pd-fade-blue border border-solid border-pd-stroke-blue rounded-lg font-pd-sans-body hidden sm:flex dark:border-none dark:bg-pd-dark-black">
+                <div className="bg-pd-accent-blue rounded-lg w-2/6 h-full flex items-center justify-center flex-col text-pd-pure-white dark:bg-pd-dark-accent-blue dark:text-pd-dark-black">
                     <div className="font-semibold lg:text-2xl md:text-xl text-lg"><span>{this.state.currentHrs}</span>:<span>{this.state.currentMin}</span></div>
                     <div className="font-medium lg:text-base md:text-sm text-xs">{this.state.amOrPm}</div>
                 </div>
-                <div className="ml-3">
-                    <div className="font-normal lg:text-2xl md:text-xl text-lg text-pd-accent-blue"><span>{this.state.dayName}, </span><span>{this.state.day}</span></div>
-                    <div className="font-normal lg:text-base md:text-sm text-xs text-pd-accent-blue"><span>{this.state.monthName}</span> <span>{this.state.year}</span></div>
+                <div className="ml-3 text-pd-accent-blue dark:text-pd-dark-accent-blue">
+                    <div className="font-normal lg:text-2xl md:text-xl text-lg"><span>{this.state.dayName}, </span><span>{this.state.day}</span></div>
+                    <div className="font-normal lg:text-base md:text-sm text-xs"><span>{this.state.monthName}</span> <span>{this.state.year}</span></div>
                 </div>
             </div>
         );

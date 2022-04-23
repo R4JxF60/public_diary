@@ -20,6 +20,7 @@ const setTheme = () => {
     theme.addEventListener("change", () => {
         theme.matches ? document.body.style.backgroundColor = "#11151C" : document.body.style.backgroundColor = "#F6F8FF";
     });
+    theme.matches ? document.body.style.backgroundColor = "#11151C" : document.body.style.backgroundColor = "#F6F8FF";
 }
 
 const createRoot = props => {

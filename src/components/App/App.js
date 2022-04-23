@@ -13,7 +13,7 @@ class App extends React.Component {
         return (
             <React.Fragment>
                 <Header onMobile={this.props.onMobile} split={this.props.split} />
-                <div className="flex flex-col md:items-center md:flex-row">
+                <div className="flex flex-col md:items-center md:flex-row lg:h-[calc(100vh-168px)] md:h-[calc(100vh-154px)] mb-1.5">
                     <Sidebar onMobile={this.props.onMobile} split={this.props.split} />
                     <Content />
                 </div>
