@@ -9,7 +9,7 @@ class Sidebar extends React.Component {
 
     render() {
         return (
-            <div className="order-last md:order-first flex md:flex-col md:items-center flex-row md:h-[calc(85vh-1.125rem)] h-[130px] border border-solid bg-pd-pure-white border-pd-stroke-blue rounded-2xl mr-1.5 ml-1.5 mt-1.5 md:mb-1.5 dark:bg-pd-dark-fade-black dark:border-none p-2">
+            <div className="order-last md:order-first flex md:flex-col flex-row border border-solid bg-pd-pure-white border-pd-stroke-blue rounded-2xl md:mr-1.5 dark:bg-pd-dark-fade-black dark:border-none p-2 md:h-full h-[100px]">
                 <TodayDiv />
                 <TodayDiv />
             </div>

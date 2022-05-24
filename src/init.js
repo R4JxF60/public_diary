@@ -2,9 +2,11 @@ import React from "react";
 import * as ReactDOM from "react-dom";
 import "./styles/main.css";
 import App from "./components/App/App";
+import ThemeProvider from "./context/theme.context";
+import MobileProvider from "./context/mobile.context";
 
 /** setting the layout of the app */
-const mobileSignalDispatcher = window.matchMedia("(max-width: 768px)");
+/*const mobileSignalDispatcher = window.matchMedia("(max-width: 768px)");
 const splitSignalDispatcher = window.matchMedia("(max-width: 640px)");
 
 mobileSignalDispatcher.addEventListener("change", () => {
@@ -21,18 +23,18 @@ const setTheme = () => {
         theme.matches ? document.body.style.backgroundColor = "#11151C" : document.body.style.backgroundColor = "#F6F8FF";
     });
     theme.matches ? document.body.style.backgroundColor = "#11151C" : document.body.style.backgroundColor = "#F6F8FF";
-}
+}*/
 
-const createRoot = props => {
+const createRoot = () => {
     ReactDOM.render(
         <React.StrictMode>
-            <div className="container max-w-6xl mx-auto">
-                <App onMobile={props.onMobile} split={props.split}/>
-            </div>
+            <MobileProvider>
+                <ThemeProvider>
+                    <App />
+                </ThemeProvider>
+            </MobileProvider>
         </React.StrictMode>
     , document.getElementById("root"));
-    /** setting the theme of the app */
-    setTheme();
 };
 
-createRoot({onMobile: mobileSignalDispatcher.matches, split: splitSignalDispatcher.matches});
+createRoot();

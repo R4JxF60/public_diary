@@ -3,22 +3,26 @@ import Header from "../Header/Header";
 import Sidebar from "../Sidebar/Sidebar";
 import Navigations from "../Header/Navigations/Navigations";
 import Content from "../Content/Content";
+import { MobileContext } from "../../context/mobile.context";
 
 class App extends React.Component {
     constructor(props) {
-        super(props);
+        super(props);//sm:h-[calc(100vh-7.375rem) h-[calc(100vh-11.875rem)]
     }
 
     render() {
         return (
-            <React.Fragment>
-                <Header onMobile={this.props.onMobile} split={this.props.split} />
-                <div className="flex flex-col md:items-center md:flex-row lg:h-[calc(100vh-168px)] md:h-[calc(100vh-154px)] mb-1.5">
-                    <Sidebar onMobile={this.props.onMobile} split={this.props.split} />
-                    <Content />
+            
+            <div className="container max-w-6xl mx-auto">
+                    <Header />
+                    <div className="flex flex-col md:items-center md:flex-row mb-1.5 mr-1.5 ml-1.5 lg:h-[calc(100vh-10.5rem)] sm:h-[calc(100vh-7.375rem)] h-[calc(100vh-12.25rem)] min-h-[300px]">
+                        <Sidebar />
+                        <Content />
+                    </div>
+                    <MobileContext.Consumer>
+                        {value => (value.onScreenSplit ? <Navigations /> : false)}
+                    </MobileContext.Consumer>
                 </div>
-                {(this.props.split) ? <Navigations onMobile={this.props.onMobile} split={this.props.split} /> : false}
-            </React.Fragment>
         );
     }
 }

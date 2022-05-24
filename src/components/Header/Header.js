@@ -4,6 +4,7 @@ import Search from "./Search/Search";
 import Navigations from "./Navigations/Navigations";
 import Notification from "./Notification/Notification";
 import SignOut from "./SignOut/SignOut";
+import { MobileContext } from "../../context/mobile.context";
 
 class Header extends React.Component {
     constructor(props) {
@@ -16,7 +17,9 @@ class Header extends React.Component {
                 <Logo />
                 <div className="flex items-center justify-between w-full">
                     <Search />
-                        {(!this.props.split) ? <Navigations onMobile={this.props.onMobile}/> : false}
+                        <MobileContext.Consumer>
+                            {value => (!value.onScreenSplit ? <Navigations /> : false)}
+                        </MobileContext.Consumer>
                     <SignOut />
                 </div>
             </div>
