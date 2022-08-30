@@ -50,14 +50,14 @@ class TodayDiv extends React.Component {
 
     render() {
         return (
-            <div className="w-52 lg:w-80 md:w-64 md:h-24 sm:h-full h-full items-center bg-pd-fade-blue border border-solid border-pd-stroke-blue rounded-lg font-pd-sans-body flex dark:border-none dark:bg-pd-dark-black md:mb-1.5 mr-1.5">
-                <div className="bg-pd-accent-blue rounded-lg w-2/6 h-full flex items-center justify-center flex-col text-pd-pure-white dark:bg-pd-dark-accent-blue dark:text-pd-dark-black">
-                    <div className="font-semibold lg:text-2xl md:text-xl text-lg"><span>{this.state.currentHrs}</span>:<span>{this.state.currentMin}</span></div>
-                    <div className="font-medium lg:text-lg md:text-base text-sm">{this.state.amOrPm}</div>
+            <div className="w-52 lg:w-80 md:w-64 md:h-24 sm:h-full h-full items-center bg-pd-fade-blue border border-solid border-pd-stroke-blue font-pd-sans-body flex dark:border-none dark:bg-pd-dark-black md:mr-0 md:mb-3 mr-1.5 rounded-xl">
+                <div className="bg-pd-accent-blue rounded-xl w-2/6 h-full flex items-center justify-center flex-col text-pd-pure-white dark:bg-pd-dark-accent-blue dark:text-pd-dark-black">
+                    <div className="font-semibold lg:text-2xl md:text-lg text-base"><span>{this.state.currentHrs}</span>:<span>{this.state.currentMin}</span></div>
+                    <div className="font-medium lg:text-base md:text-sm text-xs">{this.state.amOrPm}</div>
                 </div>
                 <div className="ml-3 text-pd-accent-blue dark:text-pd-dark-accent-blue">
-                    <div className="font-normal lg:text-2xl md:text-xl text-lg"><span>{this.state.dayName}, </span><span>{this.state.day}</span></div>
-                    <div className="font-normal lg:text-lg md:text-base text-sm"><span>{this.state.monthName}</span> <span>{this.state.year}</span></div>
+                    <div className="font-medium lg:text-xl md:text-lg text-base"><span>{this.state.dayName}, </span><span>{this.state.day}</span></div>
+                    <div className="font-normal md:text-sm text-xs"><span>{this.state.monthName}</span> <span>{this.state.year}</span></div>
                 </div>
             </div>
         );

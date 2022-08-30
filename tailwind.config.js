@@ -1,5 +1,8 @@
+const plugin = require('tailwindcss/plugin');
+
 module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
+  darkMode: 'class',
   theme: {
     extend: {
       colors: {
@@ -30,5 +33,9 @@ module.exports = {
     {
       strategy: 'base',
     }
-  ),],
+  ),require('tailwind-scrollbar'),
+  plugin(function({ addVariant }) {
+    addVariant("scrollbar", "rounded")
+  })
+],
 }
